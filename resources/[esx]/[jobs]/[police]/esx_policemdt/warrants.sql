@@ -1,0 +1,21 @@
+
+
+CREATE TABLE IF NOT EXISTS `warrants_list` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `json_data` longtext NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+CREATE TABLE IF NOT EXISTS `bolos_list` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `json_data` longtext NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+
+
+CREATE TABLE IF NOT EXISTS `arrests_list` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `json_data` longtext NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;

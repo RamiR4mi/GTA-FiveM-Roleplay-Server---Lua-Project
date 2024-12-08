@@ -1,0 +1,87 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+.video-background {
+  background: #000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -99;
+  filter: contrast(1.5);
+}
+
+body {
+  overflow: hidden;
+  background-color: rgb(200, 200, 200);
+  box-shadow: 0 0 500px rgba(0, 1, 1, 1) inset;
+  background-color: rgb(200, 200, 200);
+  margin: 0;
+
+}
+
+.t1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 60px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+}
+
+.t2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 33px;
+  text-align: center;
+  color: white;
+  text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+  border-radius: 25px;
+  background: linear-gradient(120deg,#e7d91023,#ff880028,#fa030326);
+  padding: 20px; 
+  width: 275px;
+  height: 250px;  
+}
+
+.t3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 60px;
+  text-align: center;
+  color: rgb(246, 250, 0);
+  text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+}
+
+
+
+hr{
+  color: #fff;
+  opacity: 0.3;
+  width: 50%;
+
+}
+
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+

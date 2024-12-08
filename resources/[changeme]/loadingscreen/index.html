@@ -1,0 +1,63 @@
+﻿<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+</head>
+
+
+<style>
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<body>
+
+<!--     <img class="img-header" src="img/logo.png" height="400" width="400"></img> -->
+
+
+</body>
+</html>
+
+<body>
+
+    <div class="video-background">
+        <iframe class="videoContainer__video" height="100%" width="130%" src="https://www.youtube.com/embed/EwSG4-E_mYo?controls=0&amp;showinfo=0&amp;rel=0&amp;autoplay=1&amp;loop=1&amp;mute=1" frameborder="0"></iframe>
+   </div>
+  <audio id="loading" autoplay loop>
+    <source src="music/loading.ogg" type="audio/ogg"></audio>
+<br>
+   <!--  <center><div class="t1"> Crooklyn City RP</div></center>
+    <hr>
+  <center><div class="t2">Discord: discord.gg/yourdiscord
+        <p>Web: www.yourweb.com</p>
+    </div></center>
+ -->
+<script src="./script.js"></script>
+
+<script>
+      var play = false;
+      var myAudio = document.getElementById("loading");
+  
+      myAudio.volume = 0.1;
+  
+  
+      function onKeyDown(event) {
+        switch (event.keyCode) {
+          case 32: //SpaceBar                    
+            if (play) {
+              myAudio.pause();
+              play = false;
+            } else {
+              myAudio.play();
+              play = true;
+            }
+            break;
+        }
+        return false;
+      }
+      window.addEventListener("keydown", onKeyDown, false);
+    </script>

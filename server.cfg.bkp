@@ -1,0 +1,96 @@
+# You probably don't want to change these!
+# Only change them if you're using a server with multiple network interfaces.
+endpoint_add_tcp "0.0.0.0:30120"
+endpoint_add_udp "0.0.0.0:30120"
+
+
+
+#login
+set mysql_connection_string "server=127.0.0.1;database=premium;userid=root;"
+ 
+# Disable Couchdb from essentialmode
+set es_enableCustomData 1
+ 
+
+# Give Essentialmode access to commands
+
+add_ace resource.essentialmode command.sets allow
+add_ace resource.essentialmode command.add_principal allow
+add_ace resource.essentialmode command.add_ace allow
+
+
+
+# These resources will start by default.
+exec resources.cfg
+exec permissions.cfg
+
+sv_enforceGameBuild 2802
+
+
+# This allows players to use scripthook based plugins such as lambda menu.
+# Set this to 0 to disallow scripthook.
+sv_scriptHookAllowed 0
+
+# Uncomment this to enable RCON. Make sure to change the password.
+#rcon_password changeme
+
+# A comma-separated list of tags for your server.
+# For example:
+# - sets tags "drifting, cars, racing"
+# Or:
+# - sets tags "roleplay, military, tanks"
+sets tags "pakistan,india,esx"
+
+# Set an optional server info and connecting banner image url.
+# Size doesn't matter, any banner sized image will be fine.
+#sets banner_detail "http://url.to/image.png"
+#sets banner_connecting "http://url.to/image.png"
+
+# Set your server's hostname
+sv_hostname "^1Baasha bhai ^0Roleplay | ^2Pakistan ^0& ^8India | ^2Low Ping | ^8Discord: https://discord.gg/Wq9RUR"
+
+# Nested configs!
+#exec server_internal.cfg
+
+# Loading a server icon (96x96 PNG file)
+load_server_icon server.png
+
+# convars which can be used in scripts
+set temp_convar "hey world!"
+
+# Uncomment this line if you do not want your server to be listed in the server browser.
+#sv_master1 ""
+
+# Want to only allow players authenticated with a third-party provider like Steam?
+# Don't forget Social Club is a third party provider too!
+#sv_authMaxVariance 1
+#sv_authMinTrust 5
+
+#Show server Uptime
+add_ace resource.uptime command.sets allow
+
+# Add system admins
+add_ace group.admin command allow # allow all commands
+add_ace group.admin command.quit deny # but don't allow quit
+add_principal identifier.steam:1100001468a4d74 group.admin  # baasha bhai
+
+
+# Hide player endpoints in external log output.
+sv_endpointprivacy true
+
+# Server player slot limit (must be between 1 and 32)
+sv_maxclients 7
+set onesync_enabled 1
+
+## PMA Voice
+setr voice_useNativeAudio true
+setr voice_useSendingRangeOnly true
+setr voice_enableUi 0
+setr voice_defaultCycle Y
+setr voice_enableSubmix 1
+setr voice_enableRadioAnim 1
+setr voice_defaultRadio CAPITAL
+setr voice_enableRadios 1
+setr voice_enablePhones 1
+
+exec lic.cfg

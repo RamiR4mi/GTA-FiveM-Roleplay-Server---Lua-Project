@@ -1,0 +1,198 @@
+<html>
+    <head>
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width">
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+        <style>
+			 #main, #home, #withdrawals1, #deposit1, #transfer1, #savings1, #options1
+			 {display: none;}
+		</style>
+	</head>
+    <body>
+    	<div class="container">
+			
+			<div class="center-con"> </div>
+
+			<div class="welcome-content" id="main">	
+				<div class="sidemenu">
+					<img class="logo" alt="ok" src="imgs/Logo.png" alt="ok">
+					<div class="nav">
+						<button class="accounthome" id="accounthome">Account Home</button>
+						<button class="withdrawals" id="withdrawals">Withdrawal</button>
+						<button class="deposit" id="deposit">Deposit</button>
+						<button class="transfer" id="transfer">Transfer</button>
+						<button class="savings" id="savings">Saving Account</button>
+						<button class="options" id="options">Account Options</button>
+					</div>
+					<button class="close" id="close">Close</button>
+				</div>
+			</div>
+
+			<div class="homepage" id="home">	
+				<div class="homeTitle"><h3>Welcome <span id="customerName"></span></h3></div>
+				<div class="homeInformation"><p>Welcome to <span id="serverName"></span> banking, from this screen you can make deposits, withdrawals and transfer money to other people. You can aslo check your recent activity using your statement.</p></div>
+				
+				<div class="balanceInfo">
+					<div class="balanceTitle"><h3>Bank Account Balance</h3></div>
+					<div class="balance"><h3><span id="currency1"></span><span id="currentBalance"></span></h3></div>
+					<div class="balanceHelp"><p>This is currently how much is available to spend in your account.</p></div>
+				</div>
+
+				<div class="cashBalanceInfo">
+					<div class="cashBalanceTitle"><h3>Currect Cash Balance</h3></div>
+					<div class="cashBalance"><h3><span id="currency2"></span><span id="currentCashBalance"></span></h3></div>
+					<div class="cashBalanceHelp"><p>This is currently how much cash you have on your person.</p></div>
+				</div>
+
+				<div class="quickActions">
+					<div class="quickActionsTitle"><h3>Quick Actions</h3></div>
+					<button class="deposit100" id="deposit100">Deposit <span id="currency3"></span>100</button>
+					<button class="deposit1000" id="deposit1000">Deposit <span id="currency4"></span>1,000</button>
+					<button class="deposit10000" id="deposit10000">Deposit <span id="currency5"></span>10,000</button>
+					<button class="withdraw100" id="withdraw100">Withdraw <span id="currency6"></span>100</button>
+					<button class="withdraw1000" id="withdraw1000">Withdraw <span id="currency7"></span>1,000</button>
+					<button class="withdraw10000" id="withdraw10000">Withdraw <span id="currency8"></span>10,000</button>
+					<div class="quickActionsHelp"><p>Quick actions allow you to deposit or withdraw quickier than normal.</p></div>
+				</div>
+			</div>
+
+			<div class="withdrawalpage" id="withdrawals1">	
+				<div class="withdrawalTitle"><b>Withdrawal</b></h3></div>
+				<div class="withdrawalInformation"><p>You can withdraw specific amounts of money on this screen, when you withdraw money it will take it from your bank and into your pocket.</p></div>
+				<div class="balanceInfo">
+					<div class="balanceTitle"><h3>Bank Account Balance</h3></div>
+					<div class="balance"><h3><span id="currency9"></span><span id="currentBalance1"></span></h3></div>
+					<div class="balanceHelp"><p>This is currently how much is available to spend in your account.</p></div>
+				</div>
+
+				<div class="cashBalanceInfo">
+					<div class="cashBalanceTitle"><h3>Currect Cash Balance</h3></div>
+					<div class="cashBalance"><h3><span id="currency10"></span><span id="currentCashBalance1"></span></h3></div>
+					<div class="cashBalanceHelp"><p>This is currently how much cash you have on your person.</p></div>
+				</div>
+
+				<div class="withdrawActions">
+					<div class="WithdrawInformation"><h3>Enter the amount of money you wish to withdraw below.</h3></div>
+					<div class="WithdrawInput"><input type="number" placeholder="Amount" class="form-control" id="withdrawAmount" name="withdrawAmount"></div>
+					<button class="WithdrawButton" id="withdrawButton">Withdraw</button>
+				</div>
+			</div>
+
+			<div class="depositpage" id="deposit1">	
+				<div class="withdrawalTitle"><b>Deposit</b></h3></div>
+				<div class="withdrawalInformation"><p>Deposits of specific amounts can be completed on this screen, deposits is where money being put in to your current account.</p></div>
+				<div class="balanceInfo">
+					<div class="balanceTitle"><h3>Bank Account Balance</h3></div>
+					<div class="balance"><h3><span id="currency11"></span><span id="currentBalance2"></span></h3></div>
+					<div class="balanceHelp"><p>This is currently how much is available to spend in your account.</p></div>
+				</div>
+
+				<div class="cashBalanceInfo">
+					<div class="cashBalanceTitle"><h3>Currect Cash Balance</h3></div>
+					<div class="cashBalance"><h3><span id="currency12"></span><span id="currentCashBalance2"></span></h3></div>
+					<div class="cashBalanceHelp"><p>This is currently how much cash you have on your person.</p></div>
+				</div>
+
+				<div class="depositActions">
+					<div class="DepositInformation"><h3>Enter the amount of money you wish to deposit below.</h3></div>
+					<div class="DepositInput"><input type="number" placeholder="Amount" class="form-control" id="depositAmount" name="depositAmount"></div>
+					<button class="DepositButton" id="depositButton">Deposit</button>
+				</div>
+			</div>
+
+			<div class="transferpage" id="transfer1">	
+				<div class="withdrawalTitle"><b>Transfer</b></h3></div>
+				<div class="withdrawalInformation"><p>Transfers can be made directly from your current account to another persons current account or savings account using the dedicated account number and sort code.</p></div>
+				<div class="balanceInfo">
+					<div class="balanceTitle"><h3>Bank Account Balance</h3></div>
+					<div class="balance"><h3><span id="currency13"></span><span id="currentBalance3"></span></h3></div>
+					<div class="balanceHelp"><p>This is currently how much is available to spend in your account.</p></div>
+				</div>
+
+				<div class="cashBalanceInfo">
+					<div class="cashBalanceTitle"><h3>Currect Cash Balance</h3></div>
+					<div class="cashBalance"><h3><span id="currency14"></span><span id="currentCashBalance3"></span></h3></div>
+					<div class="cashBalanceHelp"><p>This is currently how much cash you have on your person.</p></div>
+				</div>
+
+				<div class="transferActions">
+					<div class="TransferDepositInformation"><h3>Enter the id of the person you whish to transfer money to.</h3></div>
+					<div class="TransferDepositInput"><input type="number" placeholder="ID" class="form-control2" id="transferID" name="transferID"></div>
+					<div class="TransferWithdrawInformation"><h3>Enter the amount of money you wish to send below.</h3></div>
+					<div class="TransferWithdrawInput"><input type="number" placeholder="Amount" class="form-control3" id="transferAmount" name="transferAmount"></div>
+					<button class="TransferWithdrawButton" id="transferButton">Transfer</button>
+				</div>
+			</div>
+
+			<div class="savingspage" id="savings1">	
+				<div class="savingsCreator" id="savingAccountCreator" style="display:none;">
+					<button class="createSavings" id="createSavings">Create Saving Account</button>
+				</div>
+				<div class="savingsAccount" id="savingAccount" style="display:none;">
+					<div class="withdrawalTitle"><b>Saving Account</b></h3></div>
+					<div class="withdrawalInformation"><p>Your savings account is where you can store your money, and let it build up, only you will be able to take money out of this account.</p></div>
+
+					<div class="balanceInfo">
+						<div class="balanceTitle"><h3>Savings Account Balance</h3></div>
+						<div class="balance"><h3><span id="currency15"></span><span id="currentSavingBalance"></span></h3></div>
+						<div class="balanceHelp"><p>This is currently how much is inside of your saving account.</p></div>
+					</div>
+	
+					<div class="cashBalanceInfo">
+						<div class="balanceTitle2"><h3>Bank Account Balance</h3></div>
+						<div class="balance2"><h3><span id="currency16"></span><span id="currentBalance4"></span></h3></div>
+						<div class="balanceHelp2"><p>This is currently how much is available to spend in your account.</p></div>
+					</div>
+
+					<div class="savingsActions">
+						<div class="SavingsDepositInformation"><h3>Enter the amount of money you wish to deposit below.</h3></div>
+						<div class="SavingsDepositInput"><input type="number" placeholder="Amount" class="form-control2" id="savingsDepositAmount" name="savingsDepositAmount"></div>
+						<button class="SavingsDepositButton" id="savingsDepositButton">Deposit</button>
+						<div class="SavingsWithdrawInformation"><h3>Enter the amount of money you wish to withdraw below.</h3></div>
+						<div class="SavingsWithdrawInput"><input type="number" placeholder="Amount" class="form-control3" id="savingsWithdrawAmount" name="savingsWithdrawAmount"></div>
+						<button class="SavingsWithdrawButton" id="savingsWithdrawButton">Withdraw</button>
+					</div>
+
+					<button class="deleteSavings" id="deleteSavings">Delete Saving Account</button>
+				</div>
+			</div>
+
+			<div class="optionspage" id="options1">	
+				<div class="withdrawalTitle"><b>Account Options</b></h3></div>
+				<div class="withdrawalInformation"><p>This is your account options, here will you have access to change feature on your account and view information you can't see on any over page</p></div>
+
+				<div class="balanceInfo">
+					<div class="cardDesign"></div>
+					<div class="cardDesign2"></div>
+					<img class="chip" alt="ok" src="https://imgur.com/mFjt5xP.png" alt="ok">
+					<div class="cardInformation"><p>1234 5678 9876 5432</p></div>
+					<div class="cardInformation2"><p>1234</p></div>
+					<div class="cardInformation3"><p><span id=customerCardName></span></p></div>
+				</div>
+
+				<div class="OrderNewCardInformation"><h3>Have you lost your bank card, order a new one here!</h3></div>
+				<button class="OrderNewCardButton" id="orderNewCardButton">Request Card</button>
+
+				<div class="ChangePinInformation"><h3>Set / Change your pin here!</h3></div>
+				<button class="ChangePinButton" id="changePinButton">Change Pin</button>
+				<div class="NewPinCreated" id="pinCreated" style="display:none;"><h3>Pin Created.</h3></div>
+
+				<div class="changePin" id="changePin" style="display:none;">
+					<div class="changePinActions">
+						<div class="NewPinInformation"><h3>Enter your new pin.</h3></div>
+						<div class="NewPinError" id="showError" style="display:none;"><h3>Pin must be 4 numbers.</h3></div>
+						<div class="CreatePin"><input type="number" placeholder="Amount" class="form-control" id="createPin" name="createPin"></div>
+						<button class="ComfirmChangePinButton" id="comfirmChangePinButton">Comfirm</button>
+						<button class="CancelChangePinButton" id="cancelChangePinButton">Cancel</button>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+		<script src="script.js"></script>
+    </body>
+</html>
